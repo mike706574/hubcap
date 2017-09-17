@@ -32,12 +32,12 @@
   (get-contents [this owner name path]))
 
 (defn request
-  [{:keys [token username password]} {:keys [secure? throw-exceptions]}]
+  [{:keys [token username password]} {:keys [insecure? throw-exceptions]}]
   (let [request {:headers {"Accept" json-content-type
                            "Content-Type" "application/json"}
                  :client-params {"http.useragent" "clj-http"}
                  :throw-exceptions (or throw-exceptions false)
-                 :secure? (and secure? true)}]
+                 :insecure? (or insecure? false)}]
     (if token
       (update request :headers assoc "Authorization" (str "token " token))
       (assoc request :basic-auth [username password]))))
@@ -144,9 +144,9 @@
 
 (s/def :hubcap/url string?)
 
-(s/def :hubcap/secure? boolean?)
+(s/def :hubcap/insecure? boolean?)
 (s/def :hubcap/throw-exceptions boolean?)
-(s/def :hubcap/options (s/keys :opt [:hubcap/secure? :hubcap/throw-exceptions]))
+(s/def :hubcap/options (s/keys :opt [:hubcap/insecure? :hubcap/throw-exceptions]))
 
 (s/def :hubcap/token string?)
 (s/def :hubcap/username string?)

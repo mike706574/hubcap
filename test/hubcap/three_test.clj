@@ -20,5 +20,5 @@
   (let [name (rand-str)]
     (is (= {:status :ok, :body {:name name}}
            (three/create-repo (three/client config) name "Test.")))
-    (is (= {:status :ok }
+    (is (= {:status :ok}
            (three/delete-repo (three/client config) username name)))))
