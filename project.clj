@@ -1,4 +1,4 @@
-(defproject org.clojars.mike706574/hubcap "0.0.1-SNAPSHOT"
+(defproject fun.mike/hubcap "0.0.1-SNAPSHOT"
   :description "An incomplete GitHub API client."
   :url "https://github.com/mike706574/hubcap"
   :license {:name "Eclipse Public License"
