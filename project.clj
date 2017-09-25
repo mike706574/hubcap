@@ -1,4 +1,4 @@
-(defproject fun.mike/hubcap "0.0.1-SNAPSHOT"
+(defproject fun.mike/hubcap "0.0.1"
   :description "An incomplete GitHub API client."
   :url "https://github.com/mike706574/hubcap"
   :license {:name "Eclipse Public License"
@@ -13,6 +13,5 @@
                    :dependencies [[org.clojure/clojure "1.9.0-alpha20"]
                                   [com.taoensso/timbre "4.10.0"]
                                   [org.clojure/tools.namespace "0.2.11"]
-                                  [org.clojure/test.check "0.9.0"]
-                                  [org.clojars.mike706574/latch "0.1.0"]]}}
+                                  [fun.mike/latch "0.2.2"]]}}
   :repl-options {:init-ns user})
