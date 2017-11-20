@@ -14,4 +14,6 @@
                                   [com.taoensso/timbre "4.10.0"]
                                   [org.clojure/tools.namespace "0.2.11"]
                                   [fun.mike/latch "0.2.3"]]}}
+  :repositories [["releases" {:url "https://clojars.org/repo"
+                              :creds :gpg}]]
   :repl-options {:init-ns user})
