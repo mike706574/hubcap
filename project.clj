@@ -7,10 +7,10 @@
   :dependencies [[org.clojure/spec.alpha "0.1.143"]
                  [org.clojure/data.json "0.2.6"]
                  [org.clojure/data.codec "0.1.1"]
-                 [clj-http "3.7.0"]]
+                 [clj-http "3.8.0"]]
   :profiles {:dev {:source-paths ["dev"]
                    :target-path "target/dev"
-                   :dependencies [[org.clojure/clojure "1.9.0-RC1"]
+                   :dependencies [[org.clojure/clojure "1.9.0"]
                                   [com.taoensso/timbre "4.10.0"]
                                   [org.clojure/tools.namespace "0.2.11"]
                                   [fun.mike/latch "0.2.3"]]}}
